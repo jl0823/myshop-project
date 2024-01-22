@@ -1,15 +1,28 @@
 <template>
-    <div>
-        <h2>购物车</h2>
+    <div class="home">
+        <div class="content"></div>
+        <my-footer></my-footer>
     </div>
 </template>
 
 <script>
+import MyFooter from '@/components/MyFooter.vue'
     export default {
-        name: 'MyCart'
+        name: 'MyCart',
+        components:{
+            MyFooter
+        }
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+.home{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    .content{
+        flex:1;
+        overflow-y: auto;
+    }
+}
 </style>

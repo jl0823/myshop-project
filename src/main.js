@@ -5,10 +5,10 @@ import 'amfe-flexible'
 import router from "./router/index"
 
 //1.引入组件
-import {Button} from 'vant';
+import Vant from 'vant';
 //2.引入组件样式
 import 'vant/lib/index.css';
 
 const app = createApp(App)
-app.use(router).use(Button)
+app.use(router).use(Vant)
 app.mount('#app')
