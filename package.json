@@ -13,13 +13,14 @@
     "less": "^4.2.0",
     "less-loader": "^7.3.0",
     "postcss-pxtorem": "^5.1.1",
-    "vant": "^3.4.3",
+    "vant": "^3.6.12",
     "vue": "^3.2.13",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@vant/auto-import-resolver": "^1.0.2",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",

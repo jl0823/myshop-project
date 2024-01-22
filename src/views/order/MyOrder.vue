@@ -1,15 +1,28 @@
 <template>
-    <div>
-        <h3>订单页</h3>
+    <div class="home">
+        <div class="content"></div>
+        <my-footer></my-footer>
     </div>
 </template>
 
 <script>
+import MyFooter from '@/components/MyFooter.vue'
     export default {
-        name: "MyOrder"
+        name: 'MyOrder',
+        components:{
+            MyFooter
+        }
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+.home{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    .content{
+        flex:1;
+        overflow-y: auto;
+    }
+}
 </style>
