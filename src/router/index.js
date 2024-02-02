@@ -20,6 +20,10 @@ const routes = [// 路由配置数组，每个元素是一个表示一条路由�
     {
         path: '/order', // 路由路径
         component: () => import('@/views/order/MyOrder') // 路由对应的组件
+    },
+    {
+        path: '/store',
+        component: () => import('@/views/store/MyStore')
     }
 ]
 

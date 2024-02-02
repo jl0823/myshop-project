@@ -1,5 +1,5 @@
 <template>
-    <div class="item">
+    <div class="item" @click="toStore">
         <img :src="itemContent.pic" alt="">
         <div class="item-right">
             <div class="title">{{ itemContent.title }}</div>
@@ -15,9 +15,18 @@
 </template>
 
 <script>
+import {useRouter} from 'vue-router'
     export default {
         name: "NavListItem",
         props: ['itemContent'],
+        setup(){
+            const router = useRouter()
+            //跳转到店铺
+            const toStore = () => {
+                router.push('/store')
+            }
+            return {toStore}
+        }
     }
 </script>
 
