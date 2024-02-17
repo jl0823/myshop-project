@@ -27,6 +27,7 @@
 <script>
 import { reactive, toRefs, onMounted,computed } from 'vue';
 import { useStore } from 'vuex'
+import { useRouter } from 'vue-router';
 import ListItem from '@/components/ListItem.vue';
 import {Toast} from 'vant'
 export default {
@@ -37,6 +38,7 @@ export default {
     },
     setup(props) {
         const store = useStore();
+        const router = useRouter();
         const data = reactive({
             checked: [],
             submitChecked: true
@@ -49,7 +51,7 @@ export default {
                 }
             });
         };
-
+        //定义data.checked数组——用于判断有哪些选中的商品
         const init = () => {
             data.checked = store.state.carList.map((item) => item.id);
         }
@@ -57,7 +59,20 @@ export default {
         onMounted(() => {
             init();
         })
-        const onSubmit = () => {}
+        //结算功能
+        const onSubmit = () => {
+            if(data.checked.length){
+                store.commit('pay',updateData())
+                router.push({
+                    path:'/createorder',
+                    query:{
+                        list:data.checked//data.checked数组用于存储选中的商品
+                    }
+                })
+            }else{
+                Toast.fail('请选择商品!!!')
+            }
+        }
         //定义全选方法
         const choseAll = () => {
             if(data.checked.length !== store.state.carList.length){

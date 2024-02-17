@@ -10,6 +10,7 @@ import Vant from 'vant';
 //2.引入组件样式
 import 'vant/lib/index.css';
 import 'vant/es/toast/style'
+// import 'vant/es/dialog/style'
 
 const app = createApp(App)
 app.use(router).use(store).use(Vant)
