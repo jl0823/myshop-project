@@ -28,6 +28,12 @@ const routes = [// 路由配置数组，每个元素是一个表示一条路由�
     {
         path: '/createorder',
         component: () => import('@/views/createOrder/MyCreateOrder')
+    },{
+        path: '/address',
+        component: () => import('@/views/address/MyAddress')
+    },{
+        path: '/addressedit',
+        component: () => import('@/views/address/components/MyAddressEdit')
     }
 ]
 

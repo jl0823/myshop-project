@@ -24,3 +24,7 @@ a {
 li {
   list-style-type: none;
 }
+.van-address-list .van-radio-group .van-cell .van-icon{
+  position: absolute !important;
+  font-size: var(--van-address-list-edit-icon-size) !important;
+}
